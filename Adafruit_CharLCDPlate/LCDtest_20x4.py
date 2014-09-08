@@ -10,8 +10,8 @@
 # Using Adafruit_CharLCD code with the I2C and MCP230xx code aswell
 #----------------------------------------------------------------
 
-numcolumns = 20
-numrows = 4
+numcolumns = 16
+numrows = 2
 
 from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
