@@ -6,7 +6,7 @@ from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 import subprocess
 
 def run_cmd(cmd): 
-   p = subprocess.Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT) 
+   p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
    output = p.communicate()[0] 
    return output
    
