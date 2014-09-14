@@ -45,11 +45,11 @@ while True:
                      if a is 0 :
                             #call(["mpcgg", "play"])
                             #lcd.message("mpc !!!")
-                            lcd.message(call(["mpcgg", "play"]))
+                            lcd.message(run_cmd("mpcgg play"))
                             print'mpc !!!'
                             a=1
                      else :
-                            lcd.message(call(["mpcgg", "stop"]))
+                            lcd.message(run_cmd("mpcgg stop"))
                             print'mpc !!!'
                             #call(["mpcgg", "stop"])
                             #lcd.message("mpc !!!")
