@@ -33,7 +33,6 @@ btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
 prev = -1
 a=0
 while True:
-    sleep(.2)
     for b in btn:
         if lcd.buttonPressed(b[0]):
                #if lcd.message(b[1]) == "mpc":
@@ -56,6 +55,8 @@ while True:
                      call(["shairport"])
                      lcd.message("shairport !!!")
                      print'shairport !!!'
+              
+               sleep(.2)
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
