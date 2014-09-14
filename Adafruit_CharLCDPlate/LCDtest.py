@@ -4,7 +4,11 @@ from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 from subprocess import call
 
-
+def run_cmd(cmd): 
+   p = Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT) 
+   output = p.communicate()[0] 
+   return output
+   
 # Initialize the LCD plate.  Should auto-detect correct I2C bus.  If not,
 # pass '0' for early 256 MB Model B boards or '1' for all later versions
 lcd = Adafruit_CharLCDPlate()
