@@ -24,8 +24,8 @@ lcd.backlight(1)
 #    sleep(.5)
 
 # Poll buttons, display message & set backlight accordingly
-btn = ((lcd.SELECT, 'gros caca'                 , lcd.ON),
-       (lcd.LEFT  , 'Red Red Wine'              , lcd.RED),
+btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
+       (lcd.LEFT  , 'shairport'                 , lcd.RED),
        (lcd.UP    , 'Sita sings\nthe blues'     , lcd.BLUE),
        (lcd.DOWN  , 'I see fields\nof green'    , lcd.GREEN),
        (lcd.RIGHT , 'Purple mountain\nmajesties', lcd.VIOLET))
@@ -34,8 +34,10 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
-               lcd.message(b[1])
-               
+               if lcd.message(b[1]) is 'gros caca'
+                     call(["mpcgg", "play"])
+               if lcd.message(b[1]) is 'shairport'
+                     call(["shairport", "&"])
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
