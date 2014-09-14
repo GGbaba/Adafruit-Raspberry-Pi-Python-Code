@@ -63,6 +63,7 @@ while True:
                if b[0] == 2 :
                      if c is 0 : 
                             lcd.backlight(1)
+                            c=1
                      else :
                             lcd.backlight(0)
                             c=0
