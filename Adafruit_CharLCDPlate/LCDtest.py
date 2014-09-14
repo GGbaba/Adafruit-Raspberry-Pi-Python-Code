@@ -2,6 +2,8 @@
 
 from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
+from subprocess import call
+
 
 # Initialize the LCD plate.  Should auto-detect correct I2C bus.  If not,
 # pass '0' for early 256 MB Model B boards or '1' for all later versions
@@ -29,6 +31,7 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
+            call(["ls", "-l"])
             if b is not prev:
                 lcd.clear()
                 lcd.message(b[1])
