@@ -33,10 +33,10 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
-            call(["ls", "-l"])
             if b is not prev:
+                call(["ls", "-l"])
                 lcd.clear()
                 lcd.message(b[1])
-                lcd.backlight(b[2])
+                #lcd.backlight(b[2])
                 prev = b
             break
