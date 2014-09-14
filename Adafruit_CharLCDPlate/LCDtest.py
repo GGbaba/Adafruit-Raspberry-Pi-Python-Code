@@ -57,7 +57,7 @@ while True:
                             a=0
                #if lcd.message(b[1]) is 'shairport':
                if b[0] == 1 :
-                     run_cmd(["shairport", "-d"])
+                     call(["shairport", "-d"])
                      lcd.message("shairport !!!")
                      print'shairport !!!'
                if b[0] == 2 :
