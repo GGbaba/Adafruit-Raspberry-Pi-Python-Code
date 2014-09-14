@@ -12,7 +12,7 @@ lcd = Adafruit_CharLCDPlate()
 # Clear display and show greeting, pause 1 sec
 lcd.backlight(0)
 lcd.clear()
-lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
+#lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
 sleep(1)
 lcd.backlight(1)
 
@@ -57,6 +57,7 @@ while True:
                      print'shairport !!!'
               
                sleep(.2)
+               break
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
