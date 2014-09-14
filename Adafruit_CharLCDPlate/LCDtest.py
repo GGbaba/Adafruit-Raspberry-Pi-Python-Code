@@ -36,8 +36,10 @@ while True:
         if lcd.buttonPressed(b[0]):
                if lcd.message(b[1]) == "mpc":
                      call(["mpcgg", "play"])
+                     lcd.message("mpc !!!")
                if lcd.message(b[1]) is 'shairport':
                      call(["shairport", "&"])
+                     lcd.message("shairport !!!")
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
