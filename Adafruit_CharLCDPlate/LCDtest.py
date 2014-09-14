@@ -31,17 +31,29 @@ btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
        (lcd.RIGHT , 'Purple mountain\nmajesties', lcd.VIOLET))
        
 prev = -1
+a=0
 while True:
+    sleep(.2)
     for b in btn:
         if lcd.buttonPressed(b[0]):
                #if lcd.message(b[1]) == "mpc":
                if b[0] == 0 :
-                     call(["mpcgg", "play"])
-                     lcd.message("mpc !!!")
-                     print'mpc !!!'
+                     if a is 0 :
+                            #call(["mpcgg", "play"])
+                            #lcd.message("mpc !!!")
+                            lcd.message(call(["mpcgg", "play"]))
+                            print'mpc !!!'
+                            a=1
+                     else if a is 1 :
+                            lcd.message(call(["mpcgg", "stop"]))
+                            print'mpc !!!'
+                            #call(["mpcgg", "stop"])
+                            #lcd.message("mpc !!!")
+                            a=0
                #if lcd.message(b[1]) is 'shairport':
                if b[0] == 1 :
-                     call(["shairport", "&"])
+                     a = 0
+                     call(["shairport"])
                      lcd.message("shairport !!!")
                      print'shairport !!!'
                '''
