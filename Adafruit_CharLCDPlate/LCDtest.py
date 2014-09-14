@@ -44,7 +44,7 @@ while True:
                             lcd.message(call(["mpcgg", "play"]))
                             print'mpc !!!'
                             a=1
-                     else if a is 1 :
+                     else :
                             lcd.message(call(["mpcgg", "stop"]))
                             print'mpc !!!'
                             #call(["mpcgg", "stop"])
