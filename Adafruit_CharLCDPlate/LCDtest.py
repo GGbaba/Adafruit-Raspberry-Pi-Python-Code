@@ -10,16 +10,18 @@ from subprocess import call
 lcd = Adafruit_CharLCDPlate()
 
 # Clear display and show greeting, pause 1 sec
+lcd.backlight(1)
 lcd.clear()
 lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
 sleep(1)
+lcd.backlight(0)
 
 # Cycle through backlight colors
-col = (lcd.RED , lcd.YELLOW, lcd.GREEN, lcd.TEAL,
-       lcd.BLUE, lcd.VIOLET, lcd.ON   , lcd.OFF)
-for c in col:
-    lcd.backlight(c)
-    sleep(.5)
+#col = (lcd.RED , lcd.YELLOW, lcd.GREEN, lcd.TEAL,
+#       lcd.BLUE, lcd.VIOLET, lcd.ON   , lcd.OFF)
+#for c in col:
+#    lcd.backlight(c)
+#    sleep(.5)
 
 # Poll buttons, display message & set backlight accordingly
 btn = ((lcd.LEFT  , 'Red Red Wine'              , lcd.RED),
