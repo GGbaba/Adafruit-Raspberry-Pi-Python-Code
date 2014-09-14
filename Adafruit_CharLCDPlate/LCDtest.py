@@ -34,7 +34,8 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
-               if lcd.message(b[1]) == "mpc":
+               #if lcd.message(b[1]) == "mpc":
+               if b[0] == 0 :
                      call(["mpcgg", "play"])
                      lcd.message("mpc !!!")
                      print'mpc !!!'
