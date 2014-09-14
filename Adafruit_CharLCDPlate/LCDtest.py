@@ -37,9 +37,11 @@ while True:
                if lcd.message(b[1]) == "mpc":
                      call(["mpcgg", "play"])
                      lcd.message("mpc !!!")
+                     print'mpc !!!'
                if lcd.message(b[1]) is 'shairport':
                      call(["shairport", "&"])
                      lcd.message("shairport !!!")
+                     print'shairport !!!'
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
