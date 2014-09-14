@@ -52,7 +52,7 @@ while True:
                #if lcd.message(b[1]) is 'shairport':
                if b[0] == 1 :
                      a = 0
-                     call(["shairport"])
+                     call(["shairport", "&"])
                      lcd.message("shairport !!!")
                      print'shairport !!!'
               
