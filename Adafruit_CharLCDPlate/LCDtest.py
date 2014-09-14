@@ -10,7 +10,7 @@ from subprocess import call
 lcd = Adafruit_CharLCDPlate()
 
 # Clear display and show greeting, pause 1 sec
-lcd.backlight(1)
+lcd.backlight(0)
 lcd.clear()
 lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
 sleep(1)
