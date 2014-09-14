@@ -2,7 +2,8 @@
 
 from time import sleep
 from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
-from subprocess import call
+#from subprocess import call
+import subprocess
 
 def run_cmd(cmd): 
    p = Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT) 
