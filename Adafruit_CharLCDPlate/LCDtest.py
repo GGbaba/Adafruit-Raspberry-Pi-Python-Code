@@ -34,7 +34,7 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
-               lcd.message(b[0])
+               lcd.message(b[1])
                
                '''
             if b is not prev:
