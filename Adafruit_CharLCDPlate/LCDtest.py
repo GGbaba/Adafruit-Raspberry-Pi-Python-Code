@@ -14,7 +14,7 @@ lcd.backlight(1)
 lcd.clear()
 lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
 sleep(1)
-lcd.backlight(0)
+lcd.backlight(1)
 
 # Cycle through backlight colors
 #col = (lcd.RED , lcd.YELLOW, lcd.GREEN, lcd.TEAL,
@@ -33,10 +33,15 @@ prev = -1
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
+               lcd.message(b[1])
+               
+               '''
             if b is not prev:
+                call(["mpcgg", "play"])
                 call(["ls", "-l"])
                 lcd.clear()
                 lcd.message(b[1])
                 #lcd.backlight(b[2])
                 prev = b
             break
+            '''
