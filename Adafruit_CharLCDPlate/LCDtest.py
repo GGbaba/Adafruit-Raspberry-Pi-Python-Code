@@ -24,7 +24,7 @@ lcd.backlight(1)
 #    sleep(.5)
 
 # Poll buttons, display message & set backlight accordingly
-btn = ((lcd.SELECT, 'gros caca'                          , lcd.ON)),
+btn = ((lcd.SELECT, 'gros caca'                 , lcd.ON)),
        (lcd.LEFT  , 'Red Red Wine'              , lcd.RED),
        (lcd.UP    , 'Sita sings\nthe blues'     , lcd.BLUE),
        (lcd.DOWN  , 'I see fields\nof green'    , lcd.GREEN),
