@@ -67,8 +67,9 @@ while True:
                      else :
                             lcd.backlight(0)
                             c=0
-               sleep(.5)
+               #sleep(.2)
                break
+      sleep(.5) 
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
