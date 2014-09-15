@@ -15,11 +15,11 @@ def run_cmd(cmd):
 lcd = Adafruit_CharLCDPlate()
 
 # Clear display and show greeting, pause 1 sec
-lcd.backlight(0)
+lcd.backlight(1)
 lcd.clear()
 #lcd.message("Adafruit RGB LCD\nPlate w/Keypad!")
 sleep(1)
-lcd.backlight(1)
+lcd.backlight(0)
 
 # Cycle through backlight colors
 #col = (lcd.RED , lcd.YELLOW, lcd.GREEN, lcd.TEAL,
@@ -37,7 +37,7 @@ btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
        
 prev = -1
 a=0
-c=-1
+c=0
 while True:
     for b in btn:
         if lcd.buttonPressed(b[0]):
@@ -67,7 +67,7 @@ while True:
                      else :
                             lcd.backlight(0)
                             c=0
-               sleep(.2)
+               sleep(.5)
                break
                '''
             if b is not prev:
