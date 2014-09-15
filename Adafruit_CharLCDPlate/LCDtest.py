@@ -39,7 +39,7 @@ prev = -1
 a=0
 c=0
 while True:
-    sleep(.1)
+    sleep(.2)
     for b in btn:
         #sleep(.5) 
         if lcd.buttonPressed(b[0]):
@@ -69,6 +69,8 @@ while True:
                      else :
                             lcd.backlight(0)
                             c=0
+               if b[0] == 3 :
+                     run_cmd("etherwake 00:24:1d:d1:e0:e3")
                #sleep(.2)
                break
                '''
