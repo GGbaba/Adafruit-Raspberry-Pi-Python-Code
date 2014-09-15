@@ -40,6 +40,7 @@ a=0
 c=0
 while True:
     for b in btn:
+      sleep(.5) 
         if lcd.buttonPressed(b[0]):
                #if lcd.message(b[1]) == "mpc":
                if b[0] == 0 :
@@ -69,7 +70,6 @@ while True:
                             c=0
                #sleep(.2)
                break
-      sleep(.5) 
                '''
             if b is not prev:
                 call(["mpcgg", "play"])
