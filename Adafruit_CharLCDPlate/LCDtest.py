@@ -31,9 +31,9 @@ lcd.backlight(0)
 # Poll buttons, display message & set backlight accordingly
 btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
        (lcd.LEFT  , 'shairport'                 , lcd.RED),
-       (lcd.UP    , 'Sita sings\nthe blues'     , lcd.BLUE),
-       (lcd.DOWN  , 'I see fields\nof green'    , lcd.GREEN),
-       (lcd.RIGHT , 'Purple mountain\nmajesties', lcd.VIOLET))
+       (lcd.UP    , 'etherwake'                 , lcd.BLUE),
+       (lcd.DOWN  , 'backlight'                 , lcd.GREEN),
+       (lcd.RIGHT , 'resteps'                   , lcd.VIOLET))
        
 prev = -1
 a=0
@@ -43,19 +43,20 @@ while True:
     for b in btn:
         #sleep(.5) 
         if lcd.buttonPressed(b[0]):
+               lcd.clear()
                #if lcd.message(b[1]) == "mpc":
                if b[0] == 0 :
                      if a is 0 :
                             #call(["mpcgg", "play"])
                             #lcd.message("mpc !!!")
                             lcd.message(run_cmd("mpcgg play"))
-                            print'mpc !!!'
+                            print'Mpc On !!!'
                             a=1
                      else :
-                            lcd.message(run_cmd("mpcgg stop"))
-                            print'mpc !!!'
                             #call(["mpcgg", "stop"])
                             #lcd.message("mpc !!!")
+                            lcd.message(run_cmd("mpcgg stop"))
+                            print'Mpc Off'
                             a=0
                #if lcd.message(b[1]) is 'shairport':
                if b[0] == 1 :
@@ -64,13 +65,16 @@ while True:
                      print'shairport !!!'
                if b[0] == 2 :
                      if c is 0 : 
+                            lcd.message("BackLight ON !")
                             lcd.backlight(1)
                             c=1
                      else :
+                            lcd.message("BackLight OFF !")
                             lcd.backlight(0)
                             c=0
                if b[0] == 3 :
                      run_cmd("etherwake 00:24:1d:d1:e0:e3")
+                     lcd.message("etherwake to :\n 00:24:1d:d1:e0:e3")
                #sleep(.2)
                break
                '''
