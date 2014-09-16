@@ -30,10 +30,10 @@ lcd.backlight(0)
 
 # Poll buttons, display message & set backlight accordingly
 btn = ((lcd.SELECT, 'mpc'                       , lcd.ON),
-       (lcd.LEFT  , 'shairport'                 , lcd.RED),
+       (lcd.RIGHT , 'shairport'                 , lcd.RED),
        (lcd.UP    , 'etherwake'                 , lcd.BLUE),
        (lcd.DOWN  , 'backlight'                 , lcd.GREEN),
-       (lcd.RIGHT , 'resteps'                   , lcd.VIOLET))
+       (lcd.LEFT  , 'resteps'                   , lcd.VIOLET))
        
 prev = -1
 a=0
@@ -75,6 +75,9 @@ while True:
                if b[0] == 3 :
                      run_cmd("etherwake 00:24:1d:d1:e0:e3")
                      lcd.message("etherwake to :\n 00:24:1d:d1:e0:e3")
+               if b[0] == 4 :
+                     run_cmd("sudo pkill mpc && sudo pkill mpcgg && sudo pkill shairport")
+                     lcd.message("No Sound !!!")
                #sleep(.2)
                break
                '''
