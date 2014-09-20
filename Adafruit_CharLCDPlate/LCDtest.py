@@ -64,14 +64,9 @@ while True:
                      lcd.message("shairport !!!")
                      print'shairport !!!'
                if b[0] == 2 :
-                     if c is 0 : 
-                            lcd.message("BackLight ON !")
-                            lcd.backlight(1)
-                            c=1
-                     else :
-                            lcd.message("BackLight OFF !")
-                            lcd.backlight(0)
-                            c=0
+                        lcd.backlight(1)
+                        sleep(1)
+                        lcd.backlight(0)
                if b[0] == 3 :
                      run_cmd("etherwake 00:24:1d:d1:e0:e3")
                      lcd.message("etherwake to :\n 00:24:1d:d1:e0:e3")
